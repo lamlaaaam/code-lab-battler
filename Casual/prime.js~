@@ -20,7 +20,9 @@ function prime() {
         }
         return currPrime;
     }
-    return markTillLimit(100);
+    for (let i = 1000000; true; i = i + 1000) {
+        console.log(markTillLimit(i));
+    }
 }
 
-console.log(prime());
+prime();
