@@ -11,3 +11,4 @@ Then run using
 ```
 java GameGUI
 ```
+Or, just run codebattler.jar
