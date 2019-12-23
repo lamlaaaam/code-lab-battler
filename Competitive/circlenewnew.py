@@ -17,15 +17,15 @@
 # CHANGE THESE VALUES FOR TESTING
 # Number of points
 NUM_OF_POINTS_MIN = 1
-NUM_OF_POINTS_MAX = 500
+NUM_OF_POINTS_MAX = 1000
 # Canvas size in pixels
-CANVAS_WIDTH = 600
-CANVAS_HEIGHT = 600
+CANVAS_WIDTH = 1000
+CANVAS_HEIGHT = 1000
 # Percentage of points to lie in circle
 PERCENTAGE = 0.5
 # ---------------------------------------
 # Importing modules
-import pygame, random, math, numpy
+import pygame, random, math 
 
 # FUNCTIONS FOR POINTS
 # ---------------------------------------
@@ -121,7 +121,7 @@ def findCircle(points, percentage, canvas):
     return None
 def findCircleBrute(points, percentage, canvas):
     N = int(percentage * len(points))
-    jump = 1 if CANVAS_WIDTH <= 10 else CANVAS_WIDTH // 10
+    jump = 1
     for x in range(CANVAS_WIDTH // 2, CANVAS_WIDTH, jump):
         for y in range(CANVAS_HEIGHT // 2, CANVAS_HEIGHT):
             circle = circleRcoverN((x, y), points, N, canvas)
